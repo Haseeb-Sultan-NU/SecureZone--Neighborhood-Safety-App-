@@ -10,3 +10,4 @@ out/
 
 # Ignore dependency libraries
 lib/
+bin/

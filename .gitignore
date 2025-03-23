@@ -1,0 +1,12 @@
+# Ignore compiled class files
+bin/
+*.class
+
+# Ignore IDE settings
+.vscode/
+*.iml
+.idea/
+out/
+
+# Ignore dependency libraries
+lib/

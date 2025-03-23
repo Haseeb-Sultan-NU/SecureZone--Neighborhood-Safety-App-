@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.app.SafetyMapController"
+      spacing="15" alignment="CENTER"
+      styleClass="root">
+
+    <Label text="Neighborhood Safety Map" styleClass="title"/>
+
+    <ComboBox fx:id="incidentFilter" promptText="Filter by Incident Type" styleClass="dropdown"/>
+
+    <WebView fx:id="mapView" styleClass="map-view"/>
+
+</VBox>

@@ -1,0 +1,121 @@
+.root {
+    -fx-background-color: #1e1e2e;
+    -fx-padding: 30;
+    -fx-alignment: center;
+}
+
+/* Titles */
+.title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+/* Dropdown */
+.dropdown {
+    -fx-pref-width: 300px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-background-color: #2e2e3e;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #6a6a8e;
+    -fx-border-radius: 5;
+}
+
+/* Map View */
+.map-view {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 400px;
+}
+
+/* Buttons */
+.button, .button-submit {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+    -fx-font-size: 16px;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.button-submit {
+    -fx-background-color: #28a745;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3;
+}
+
+.button-submit:hover {
+    -fx-background-color: #218838;
+}
+
+/* Sections in Main Page */
+.section {
+    -fx-pref-width: 300px;
+    -fx-padding: 20px;
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+    -fx-background-color: #007bff;
+    -fx-border-radius: 10;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-cursor: hand;
+}
+
+.section:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* Upload Label */
+.upload-label {
+    -fx-text-fill: #ffcc00;
+    -fx-font-size: 14px;
+}
+
+/* Emergency Contacts List */
+.contact-list {
+    -fx-pref-width: 350px;
+    -fx-pref-height: 250px;
+    -fx-background-color: #2e2e3e;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #6a6a8e;
+    -fx-border-radius: 5;
+    -fx-font-size: 16px;
+}
+
+/* Emergency Contact Click Effect */
+.contact-list .list-cell {
+    -fx-padding: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: #444;
+}
+
+.contact-list .list-cell:hover {
+    -fx-background-color: #0056b3;
+    -fx-text-fill: white;
+}
+
+/* Safety Tips List */
+.tips-list {
+    -fx-pref-width: 350px;
+    -fx-pref-height: 200px;
+    -fx-background-color: #2e2e3e;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #6a6a8e;
+    -fx-border-radius: 5;
+    -fx-font-size: 16px;
+}
+
+/* Safety Tip Details */
+.tips-details {
+    -fx-pref-width: 350px;
+    -fx-pref-height: 150px;
+    -fx-background-color: #1e1e2e;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #6a6a8e;
+    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}

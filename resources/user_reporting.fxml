@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.app.UserReportingController"
+      spacing="15" alignment="CENTER"
+      styleClass="root">
+
+    <Label text="Report an Incident" styleClass="title"/>
+
+    <ComboBox fx:id="incidentTypeDropdown" promptText="Select Incident Type" styleClass="dropdown"/>
+
+    <TextArea fx:id="incidentDescription" promptText="Describe the incident..." styleClass="input-large"/>
+
+    <TextField fx:id="locationField" promptText="Enter Location" styleClass="input"/>
+
+    <CheckBox fx:id="anonymousCheckbox" text="Report Anonymously"/>
+
+    <Button text="Upload Photos/Videos" onAction="#handleUploadFiles" styleClass="button"/>
+    <Label fx:id="uploadedFilesLabel" text="No files selected" styleClass="upload-label"/>
+
+    <Button text="Submit Report" onAction="#handleSubmitReport" styleClass="button-submit"/>
+
+</VBox>

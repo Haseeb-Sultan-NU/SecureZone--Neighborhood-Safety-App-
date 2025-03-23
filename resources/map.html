@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Neighborhood Safety Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        #map { width: 100%; height: 400px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        var map = L.map('map').setView([45.4215, -75.6972], 13); 
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        var incidents = [
+            { type: "Crime", lat: 45.423, lon: -75.697, level: "high" },
+            { type: "Accident", lat: 45.420, lon: -75.695, level: "medium" },
+            { type: "Hazard", lat: 45.419, lon: -75.700, level: "low" }
+        ];
+
+        var markers = [];
+
+        function addMarkers() {
+            incidents.forEach(incident => {
+                var color = incident.level === "high" ? "red" :
+                            incident.level === "medium" ? "orange" : "green";
+
+                var marker = L.circleMarker([incident.lat, incident.lon], {
+                    color: color,
+                    radius: 8
+                }).addTo(map).bindPopup(incident.type);
+
+                markers.push(marker);
+            });
+        }
+
+        function filterIncidents(type) {
+            markers.forEach(marker => map.removeLayer(marker));
+            markers = [];
+
+            incidents.forEach(incident => {
+                if (type === "All" || incident.type === type) {
+                    var color = incident.level === "high" ? "red" :
+                                incident.level === "medium" ? "orange" : "green";
+
+                    var marker = L.circleMarker([incident.lat, incident.lon], {
+                        color: color,
+                        radius: 8
+                    }).addTo(map).bindPopup(incident.type);
+
+                    markers.push(marker);
+                }
+            });
+        }
+
+        addMarkers();
+    </script>
+</body>
+</html>

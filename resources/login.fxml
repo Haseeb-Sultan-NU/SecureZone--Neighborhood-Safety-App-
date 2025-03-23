@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.app.LoginController"
+      spacing="15" alignment="CENTER" styleClass="root">
+    
+    <Label text="Neighborhood Safety" styleClass="title"/>
+    
+    <TextField fx:id="emailField" promptText="Email" styleClass="input"/>
+    
+    <PasswordField fx:id="passwordField" promptText="Password" styleClass="input"/>
+    <TextField fx:id="visiblePasswordField" promptText="Password" styleClass="input" visible="false"/>
+    
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <CheckBox fx:id="showPasswordCheckBox" text="Show Password"/>
+        <CheckBox fx:id="rememberMeCheckBox" text="Remember Me"/>
+    </HBox>
+    
+    <Button fx:id="signInButton" text="Sign In" onAction="#handleSignIn" styleClass="button"/>
+    <Button fx:id="signUpButton" text="Sign Up" onAction="#handleSignUp" styleClass="button-secondary"/>
+    
+    <Label fx:id="forgotPasswordLabel" text="Forgot Password?" styleClass="forgot-password" onMouseClicked="#handleForgotPassword"/>
+</VBox>

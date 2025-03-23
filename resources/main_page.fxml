@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.app.MainPageController"
+      spacing="20" alignment="CENTER"
+      styleClass="root">
+
+  
+    <Label text="SecureZone" styleClass="title"/>
+
+    <Label fx:id="userReportingSection" text="User Reporting"
+           styleClass="section" onMouseClicked="#handleUserReporting"/>
+
+    <Label fx:id="safetyMapSection" text="Neighborhood Safety Map"
+           styleClass="section" onMouseClicked="#handleSafetyMap"/>
+
+    <Label fx:id="emergencyContactsSection" text="Emergency Contacts"
+           styleClass="section" onMouseClicked="#handleEmergencyContacts"/>
+
+    <Label fx:id="safetyTipsSection" text="Safety Tips & Resources"
+           styleClass="section" onMouseClicked="#handleSafetyTips"/>
+
+</VBox>
